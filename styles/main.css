@@ -1157,6 +1157,9 @@ footer {
 }
 
 @media screen and (max-width:770px) {
+    header nav ul,
+    .text-center{
+        display:none;
     .counters>div {
         justify-content: space-around !important;
         flex-wrap: wrap;
