@@ -448,6 +448,11 @@ header {
     transition: all .2s
 }
 
+header nav ul,
+.text-center {
+    display: flex;
+}
+
 .btn-link,
 .text-center {
     width: 590px;
@@ -1158,8 +1163,9 @@ footer {
 
 @media screen and (max-width:770px) {
     header nav ul,
-    .text-center{
-        display:none;
+    .text-center {
+        display: none !important;
+    }
     .counters>div {
         justify-content: space-around !important;
         flex-wrap: wrap;
