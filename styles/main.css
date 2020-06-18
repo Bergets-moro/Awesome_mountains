@@ -364,10 +364,17 @@ header {
 .hide-menu {
     display: none;
     align-items: center;
+    cursor: pointer;
+    transition: all .2s
 }
 
 .hide-menu svg {
-    fill: #fff;
+    fill: #fff
+}
+
+.hide-menu:hover svg {
+    fill: #998675;
+    transition: all .5s
 }
 
 .cart:hover,
@@ -444,7 +451,7 @@ header nav,
     font-family: 'Raleway'
 }
 
-.text-center>span {
+.text-top {
     font-size: 36px
 }
 
@@ -1121,7 +1128,7 @@ header nav,
     background-position: -630px 0
 }
 
-footer {
+.footer-top {
     padding: 80px 0;
     background-color: #191919
 }
@@ -1129,130 +1136,95 @@ footer {
 .item-footer {
     width: 270px;
     font-family: 'Montserrat';
-    font-weight: 300;
     text-align: left;
 }
 
+.item-footer h3 {
+    margin: 25px 0;
+    font-family: 'Raleway';
+    font-size: 24px;
+    color: #fff;
+}
+
+.item-footer>div:hover p {
+    color: #c7b299;
+    transition: all .2s;
+}
+
+.item-footer>div:hover span {
+    color: #fff;
+    transition: all .2s;
+}
+
 .item-footer p {
+    margin: 5px 0 15px 0;
     color: #555;
     font-size: 14px;
+    transition: all .5s;
+}
+
+.item-footer div:not(:last-child):after {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 2px;
+    background-color: #252525;
+    margin-bottom: 15px;
 }
 
 .item-footer .logo+p {
     margin: 30px 0;
 }
 
-@media screen and (max-width:360px) {
-    .text-center .text-top,
-    .text-center .text-bottom {
-        display: none;
-    }
-    .text-center .btn-link {
-        margin-top: 200%;
-    }
-    .item-box img {
-        width: 100%;
-    }
-    .mobile-devices img {
-        height: 100%;
-        width: 100%;
-    }
+.recent-posts span {
+    font-size: 12px;
+    color: #363636;
+    transition: all .5s;
 }
 
-@media screen and (max-width:640px) {
-    .counters>div {
-        flex-direction: column;
-    }
-    .logos {
-        flex-wrap: wrap!important;
-    }
-    .sponsors .logo {
-        width: 210px;
-        height: 210px;
-    }
-    .inner-logo:nth-child(2) .logo {
-        background-position: -210px 0
-    }
-    .inner-logo:nth-child(3) .logo {
-        background-position: -420px 0
-    }
-    .inner-logo:nth-child(4) .logo {
-        background-position: -630px 0
-    }
-    .services-item {
-        width: 100%;
-    }
-    .categories {
-        flex-direction: column !important;
-    }
+.footer-bottom {
+    bottom: 0;
+    background: #111;
+    padding: 45px 0 50px 0;
 }
 
-@media screen and (max-width:800px) {
-    .hide-menu {
-        display: flex;
-    }
-    header nav ul,
-    .logo-txt,
-    .add-menu .search {
-        display: none !important;
-    }
-    .counters>div {
-        justify-content: space-around !important;
-        flex-wrap: wrap;
-    }
-    .inner-logo {
-        justify-content: center!important
-    }
-    .Latest-projects-text,
-    .portfolio-text,
-    nav.categories li a {
-        width: 100%
-    }
-    nav.categories {
-        width: 100%
-    }
-    header {
-        flex-direction: none !important;
-    }
-    .video-presentation p {
-        display: none;
-    }
-    .gallery .text-center {
-        width: 50%;
-    }
-    .text-center h1 {
-        font-size: 2em
-    }
-    .text-center span {
-        font-size: 1.5em
-    }
-    .services>div {
-        justify-content: space-around!important;
-        flex-wrap: wrap!important;
-    }
-    * {
-        text-align: center!important
-    }
-    .mobile-devices-text ul li {
-        text-align: left!important
-    }
-    .mobile-devices>div {
-        flex-direction: column-reverse!important
-    }
-    .arrows {
-        width: 75%!important
-    }
-    .screen-img {
-        height: 335px;
-        background-size: 75%
-    }
-    .inner-logo {
-        padding: 40px 0
-    }
+.footer-bottom ul {
+    margin: 0;
+}
+
+.footer-bottom ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 2px;
+}
+
+.footer-bottom ul li:not(:first-child):before {
+    content: "|";
+    color: #252525;
+    margin: 0px 5px;
+}
+
+.footer-bottom ul li a {
+    font-family: 'Montserrat';
+    font-size: 13px;
+    text-align: right;
+    color: #555;
+    line-height: 20px;
+    transition: all .5s;
+}
+
+.footer-bottom ul li a span {
+    color: #959595;
+}
+
+.footer-bottom ul li a:hover {
+    text-decoration: none;
+    color: #c7b299;
+    transition: all .2s;
 }
 
 @media screen and (max-width:1024px) {
-    .logo-txt {
+    header .logo-txt {
         display: none;
     }
     .menu {
@@ -1286,5 +1258,118 @@ footer {
     }
     .inner-logo:nth-child(4) .logo {
         background-position: -450px 0
+    }
+}
+
+@media screen and (max-width:800px) {
+    .hide-menu {
+        display: flex;
+    }
+    header nav ul,
+    header .logo-txt,
+    .add-menu .search {
+        display: none !important;
+    }
+    .counters>div {
+        justify-content: space-around !important;
+        flex-wrap: wrap;
+    }
+    .inner-logo {
+        justify-content: center!important
+    }
+    .Latest-projects-text,
+    .portfolio-text,
+    nav.categories li a {
+        width: 100%
+    }
+    nav.categories {
+        width: 100%
+    }
+    header {
+        flex-direction: none !important;
+    }
+    .video-presentation p {
+        display: none;
+    }
+    .gallery .text-center {
+        width: 50%;
+    }
+    .text-center h1 {
+        font-size: 2em
+    }
+    .text-top {
+        font-size: 1.5em
+    }
+    .services>div {
+        justify-content: space-around!important;
+        flex-wrap: wrap!important;
+    }
+    * {
+        text-align: center!important
+    }
+    .mobile-devices-text ul li {
+        text-align: left!important
+    }
+    .mobile-devices>div {
+        flex-direction: column-reverse!important
+    }
+    .arrows {
+        width: 75%!important
+    }
+    .screen-img {
+        height: 335px;
+        background-size: 75%
+    }
+    .inner-logo {
+        padding: 40px 0
+    }
+}
+
+@media screen and (max-width:640px) {
+    .cart {
+        width: 27px;
+        padding: 0 !important;
+    }
+    .counters>div {
+        flex-direction: column;
+    }
+    .logos {
+        flex-wrap: wrap!important;
+    }
+    .sponsors .logo {
+        width: 210px;
+        height: 210px;
+    }
+    .inner-logo:nth-child(2) .logo {
+        background-position: -210px 0
+    }
+    .inner-logo:nth-child(3) .logo {
+        background-position: -420px 0
+    }
+    .inner-logo:nth-child(4) .logo {
+        background-position: -630px 0
+    }
+    .services-item {
+        width: 100%;
+    }
+    .categories {
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .text-center .text-top,
+    .text-center .text-bottom {
+        display: none;
+    }
+    .text-center .btn-link {
+        margin-top: 200%;
+    }
+    .item-box img {
+        width: 100%;
+    }
+    .mobile-devices img {
+        height: 100%;
+        width: 100%;
     }
 }
