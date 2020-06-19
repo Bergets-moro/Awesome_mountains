@@ -184,10 +184,10 @@
 
 @keyframes hover-arrow {
     40% {
-        width: 45%
+        width: 110px
     }
     to {
-        width: 30%
+        width: 93px
     }
 }
 
@@ -352,7 +352,8 @@ header {
     transition: all .5s
 }
 
-.logo-txt {
+.logo-txt,
+.logo-footer-txt {
     font-family: Raleway;
     color: #fff;
     font-size: 34px;
@@ -640,6 +641,10 @@ header nav,
     font-size: 18px;
     color: #615855;
     text-align: left
+}
+
+.purchase .btn-link {
+    margin-left: 10px;
 }
 
 .categories {
@@ -1035,7 +1040,8 @@ header nav,
 }
 
 .posts .item-bottom a,
-.posts .item-bottom p {
+.posts .item-bottom p,
+.item-footer>p+a {
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 300;
@@ -1047,15 +1053,17 @@ header nav,
     padding: 20px 0
 }
 
-.posts .item-bottom a {
+.posts .item-bottom a,
+.item-footer>p+a {
     text-decoration: none;
     color: #c7b299!important;
     position: relative;
-    width: 30%;
+    width: 93px;
     transition: all .5s
 }
 
-.posts .item-bottom a:before {
+.posts .item-bottom a:before,
+.item-footer>p+a:before {
     z-index: 3;
     content: "";
     display: block;
@@ -1072,7 +1080,8 @@ header nav,
     overflow: hidden
 }
 
-.posts .item-bottom a:hover {
+.posts .item-bottom a:hover,
+.item-footer>p+a:hover {
     animation: hover-arrow 1s infinite
 }
 
@@ -1093,6 +1102,26 @@ header nav,
     background: #362f2d;
     border: transparent;
     transition: all .5s
+}
+
+.pagination-rows svg {
+    fill: #d1d1d1
+}
+
+.pagination-rows button {
+    margin: 10px 4px 0;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.pagination-rows button:hover svg {
+    fill: #c7b299;
+}
+
+.pagination-rows button:focus {
+    outline: none;
+    border: none;
 }
 
 .sponsors {
@@ -1134,9 +1163,14 @@ header nav,
 }
 
 .item-footer {
+    margin: 0 5px;
     width: 270px;
     font-family: 'Montserrat';
     text-align: left;
+}
+
+.item-footer:nth-child(1) p {
+    margin: 30px 0;
 }
 
 .item-footer h3 {
@@ -1157,16 +1191,20 @@ header nav,
 }
 
 .item-footer p {
-    margin: 5px 0 15px 0;
+    margin: 0;
+    ;
     color: #555;
     font-size: 14px;
     transition: all .5s;
 }
 
-.item-footer div:not(:last-child):after {
+.recent-posts p {
+    margin: 5px 0 15px 0;
+}
+
+.item-footer:not(:first-child):not(:last-child) div:not(:last-child):after {
     content: "";
     display: block;
-    width: 270px;
     height: 2px;
     background-color: #252525;
     margin-bottom: 15px;
@@ -1176,10 +1214,51 @@ header nav,
     margin: 30px 0;
 }
 
-.recent-posts span {
+.item-footer:not(:first-child) span {
     font-size: 12px;
     color: #363636;
     transition: all .5s;
+}
+
+.twitter span {
+    margin-top: 3px;
+    display: block;
+    margin-bottom: 23px;
+}
+
+.twitter a {
+    color: #00bff3;
+}
+
+.twitter div:nth-child(4) a {
+    color: #959595;
+}
+
+.twitter div:nth-child(4) a:hover {
+    color: #00bff3;
+}
+
+.twitter a:hover {
+    text-decoration: none;
+    color: #c7e8f7;
+}
+
+.widgets div a:nth-child(2n+1) {
+    margin-right: 10px;
+}
+
+.widgets div a {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.widgets div a img {
+    transition: all .5s;
+}
+
+.widgets div a:hover img {
+    transform: scale(1.2);
+    transition: all .3s;
 }
 
 .footer-bottom {
@@ -1262,6 +1341,9 @@ header nav,
 }
 
 @media screen and (max-width:800px) {
+    .purchase>div {
+        justify-content: center !important;
+    }
     .hide-menu {
         display: flex;
     }
@@ -1304,9 +1386,6 @@ header nav,
         justify-content: space-around!important;
         flex-wrap: wrap!important;
     }
-    * {
-        text-align: center!important
-    }
     .mobile-devices-text ul li {
         text-align: left!important
     }
@@ -1326,6 +1405,12 @@ header nav,
 }
 
 @media screen and (max-width:640px) {
+    .purchase-text,
+    .portfolio,
+    .categories,
+    .purchase-text p {
+        text-align: center;
+    }
     .cart {
         width: 27px;
         padding: 0 !important;
