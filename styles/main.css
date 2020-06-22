@@ -1431,7 +1431,7 @@ header nav,
         background-color: black;
         position: absolute;
         display: flex !important;
-        transition: top .5s;
+        transition: top .25s;
     }
     .purchase>div {
         justify-content: center !important;
@@ -1473,10 +1473,13 @@ header nav,
         width: 50%;
     }
     .text-center h1 {
-        font-size: 2em
+        font-size: 1.5em
+    }
+    .text-center p {
+        font-size: .8em
     }
     .text-top {
-        font-size: 1.5em
+        font-size: 1.2em
     }
     .services>div {
         justify-content: space-around!important;
