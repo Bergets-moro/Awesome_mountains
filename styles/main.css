@@ -373,7 +373,7 @@
 }
 
 header label {
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .add-menu,
@@ -1382,9 +1382,6 @@ header nav,
     .menu {
         padding: 0;
     }
-    .add-menu button {
-        padding: 0 10px;
-    }
     .menu li {
         padding: 0 1%;
     }
@@ -1511,7 +1508,7 @@ header nav,
         text-align: center;
     }
     .cart {
-        width: 27px;
+        width: 28px;
         padding: 0 !important;
     }
     .counters>div {
