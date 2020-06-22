@@ -322,6 +322,12 @@
     color: #8c8c8c
 }
 
+.add-menu,
+.logo,
+.hidden-menu-switch {
+    z-index: 10;
+}
+
 .inner-wrap,
 body {
     width: 100%;
@@ -1362,6 +1368,7 @@ header nav,
         overflow: inherit !important;
     }
     header .menu {
+        padding-top: 116px;
         height: 100vh;
         width: 100%;
         flex-direction: column;
