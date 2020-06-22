@@ -1490,20 +1490,4 @@ header nav,
         flex-direction: column !important;
     }
 }
-
-@media screen and (max-width:360px) {
-    .text-center .text-top,
-    .text-center .text-bottom {
-        display: none;
-    }
-    .text-center .btn-link {
-        margin-top: 200%;
-    }
-    .item-box img {
-        width: 100%;
-    }
-    .mobile-devices img {
-        height: 100%;
-        width: 100%;
-    }
 }
