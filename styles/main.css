@@ -1431,7 +1431,7 @@ header nav,
         background-color: black;
         position: absolute;
         display: flex !important;
-        transition: top 1s;
+        transition: top .5s;
     }
     .purchase>div {
         justify-content: center !important;
