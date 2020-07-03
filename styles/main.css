@@ -267,11 +267,11 @@
     font-weight: 800
 }
 
-.carousel-inner {
-    width: 100%;
+#main-carousel .carousel-inner {
     height: 100vh;
 }
 
+.carousel-inner,
 .carousel-inner div,
 .carousel-inner img {
     object-fit: cover;
@@ -1052,6 +1052,7 @@ header nav,
 }
 
 .posts-item {
+    width: 370px;
     margin-bottom: 30px
 }
 
@@ -1150,12 +1151,18 @@ header nav,
 }
 
 .posts .item-top {
-    overflow: hidden
+    overflow: hidden;
+    height: 220px;
 }
 
 .posts .item-bottom a:hover,
 .item-footer>p+a:hover {
     animation: hover-arrow 1s infinite
+}
+
+#mini-carousel {
+    height: inherit;
+    width: inherit;
 }
 
 .posts-item:hover .calendar .day {
